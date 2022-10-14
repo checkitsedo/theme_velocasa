@@ -1,0 +1,8 @@
+# Fluid Styled Content
+styles {
+    templates {
+        layoutRootPath = EXT:theme_velocasa/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:theme_velocasa/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:theme_velocasa/Resources/Private/Templates/ContentElements/
+    }
+}
