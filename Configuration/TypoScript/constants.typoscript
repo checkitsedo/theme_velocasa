@@ -1,56 +1,25 @@
-######################
-#### DEPENDENCIES ####
-######################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
+# ###########################
+# velocasa root constants.typoscript
+# ===========================
 
+# TYPO3 TypoScript Reference
+# https://docs.typo3.org/m/typo3/reference-typoscript/master/en-us/Index.html
 
-##############################
-#### FLUID STYLED CONTENT ####
-##############################
-styles {
-    templates {
-        layoutRootPath = EXT:theme_velocasa/Resources/Private/Layouts/ContentElements/
-        partialRootPath = EXT:theme_velocasa/Resources/Private/Partials/ContentElements/
-        templateRootPath = EXT:theme_velocasa/Resources/Private/Templates/ContentElements/
-    }
-}
+# ###########################
+# Import all TypoScript constants
+# ===========================
 
+# import all FluidStyledContent constants
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
 
-############
-### PAGE ###
-############
-page {
-     fluidtemplate {
-        layoutRootPath = EXT:theme_velocasa/Resources/Private/Layouts/Page/
-        partialRootPath = EXT:theme_velocasa/Resources/Private/Partials/Page/
-        templateRootPath = EXT:theme_velocasa/Resources/Private/Templates/Page/
-    }
-    meta {
-        description =
-        author =
-        keywords =
-        viewport = width=device-width, initial-scale=1
-        robots = index,follow
-        apple-mobile-web-app-capable = no
-        compatible = IE=edge
-    }
-    tracking {
-        google {
-            trackingID =
-            anonymizeIp = 1
-        }
-    }
-}
+# import all ContentElements constants
+@import 'EXT:theme_velocasa/Configuration/TypoScript/ContentElement/constants.typoscript'
 
+# import all Page constants
+@import 'EXT:theme_velocasa/Configuration/TypoScript/Page/constants.typoscript'
 
-##############
-### CONFIG ###
-##############
-config {
-    no_cache = 0
-    removeDefaultJS = 0
-    admPanel = 1
-    prefixLocalAnchors = all
-    headerComment = build by sitepackagebuilder.com
-    sendCacheHeaders = 1
-}
+# import Config constants
+@import 'EXT:theme_velocasa/Configuration/TypoScript/Config/constants.typoscript'
+
+# import Plugin constants
+@import 'EXT:theme_velocasa/Configuration/TypoScript/Plugin/constants.typoscript'
